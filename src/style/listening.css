@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@font-face {
+  font-family: futureFont;
+  src: url("../../src/assets/FutureNow.ttf");
+}
+body{
+  width: 100%;
+  height: 100%;
+}
+@keyframes circle {
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes outer-circle {
+  0% {
+    border-color: transparent;
+  }
+  25% {
+    border-color: transparent;
+  }
+  75% {
+    transform: scale(1.2);
+    border: 1vmin solid #b5dad188;
+  }
+  100% {
+    transform: scale(1.7);
+    border: 1vmin solid #b5dad188;
+    border-color: transparent;
+  }
+}
+@keyframes outer-circle-2 {
+  0% {
+    transform: scale(1.3);
+    border: 1vmin solid #b5dad1b7;
+  }
+  50% {
+    transform: scale(1.7);
+    border-color: transparent;
+  }
+  75% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 #5db3c834, 0 0 0 0vmin #5db3c834, 0 0 0 0vmin #5db3c834,
+      0 0 0 20vmin #5db3c834;
+  }
+  25% {
+    box-shadow: 0 0 0 0 #5db3c834, 0 0 0 0vmin #5db3c834, 0 0 0 15vmin #5db3c834,
+      0 0 0 20vmin #5db3c834;
+  }
+  50% {
+    box-shadow: 0 0 0 0 #5db3c834, 0 0 0 10vmin #5db3c834,
+      0 0 0 15vmin #5db3c834, 0 0 0 20vmin #5db3c834;
+  }
+  75% {
+    box-shadow: 0 0 0 4vmin #5db3c834, 0 0 0 10vmin #5db3c834,
+      0 0 0 15vmin #5db3c834, 0 0 0 20vmin #5db3c834;
+  }
+  100% {
+    box-shadow: 0 0 0 0vmin #5db3c834, 0 0 0 0vmin #5db3c834,
+      0 0 0 0vmin #5db3c834, 0 0 0 0vmin rgba(91, 193, 255, 0);
+  }
+}
+body {
+  background: linear-gradient(to bottom, #083c49, #061d24);
+  overflow: hidden;
+}
+
+.title {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 60vmin;
+  font-size: 7vmin;
+  /* font-family: "futureFont", sans-serif; */
+}
+@media (max-width: 480px) and (min-width: 320px) {
+  .title {
+    margin-top: 55vmin;
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 35vmin;
+  height: 35vmin;
+  border-radius: 50%;
+  background: #10272e;
+  background-image: url("../assets/jarvis.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  animation: circle 2s linear infinite, ripple 0.9s linear infinite;
+}
+.outer-circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 90vmin;
+  height: 90vmin;
+  background: transparent;
+  border-radius: 50%;
+  animation: outer-circle 3s linear infinite;
+}
+
+.outer-circle-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 90vmin;
+  height: 90vmin;
+  background: transparent;
+  border-radius: 50%;
+  animation: outer-circle-2 3s linear infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-content {
+  color: white;
+}
+
+.btn-style{
+  display: flex;
+
+}
+
+button {
+  /* position: absolute; */
+  background: rgb(12, 192, 147);
+  color: rgb(255 255 255);
+  border-radius: 50%;
+  padding: 20px 20px;
+  border: none;
+  font-size: 20px;
+  margin: auto;
+  display: flex;
+  position: relative;
+  margin-top: -80px;
+  cursor: pointer;
+}
+
+button:focus,
+button:hover {
+  background: rgb(4, 146, 159);
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+.counter-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
